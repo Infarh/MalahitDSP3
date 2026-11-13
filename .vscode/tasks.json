@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Malahit: info",
+      "type": "shell",
+      "command": "python",
+      "args": ["malahit.py", "info"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Malahit: get status",
+      "type": "shell",
+      "command": "python",
+      "args": ["malahit.py", "get"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Malahit: scan FM band",
+      "type": "shell",
+      "command": "python",
+      "args": ["malahit.py", "scan", "87.5M", "108M", "--step", "100k"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Malahit: record IQ",
+      "type": "shell",
+      "command": "python",
+      "args": ["malahit.py", "record", "captures/iq.wav", "--seconds", "10"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Malahit: run tests",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "unittest", "discover", "-s", "tests", "-v"],
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}
